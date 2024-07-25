@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planning Process</title>
+    <link rel="stylesheet" href="index6.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <!-- Sidebar links -->
+            <li><a href="index.html"><class=""><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="index2.html"><class=""><i class="fas fa-book"></i> Introduction</a></li>
+            <li><a href="index3.html"><class=""><i class="fas fa-download"></i> Download Application</a></li>
+            <li><a href="index4.html"><class=""><i class="fas fa-cogs"></i> Environment Setup</a></li>
+            <li><a href="index5.html"><class=""><i class="fas fa-robot"></i> ROS for Autonomous Mode</a></li>
+            <li><a href="index6.html" class="active"><i class="fas fa-calendar-check"></i> Planning Process</a></li>
+            <li><a href="index7.html"><i class="fas fa-paint-brush"></i> Design</a></li>
+            <li><a href="index8.html"><i class="fas fa-code"></i> Source Code</a></li>
+            <li><a href="index9.html"><i class="fas fa-book-open"></i> User Manual</a></li>
+            <li><a href="index10.html"><i class="fas fa-check-circle"></i> Assessment</a></li>
+            <li><a href="index11.html"><i class="fas fa-users"></i> Conclusion</a></li>
+            <li><a href="index12.html"><i class="fas fa-users"></i> About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="header header-centered">Planning Process</div>
+            
+            <div class="section-title">
+                <h2><i class="fas fa-code"></i> Pseudocode</h2>
+            </div>
+            <div class="content">
+                <div class="mode-container">
+                    <div class="mode">
+                        <h3><i class="fas fa-keyboard"></i> Manual Mode</h3>
+                        <img src="kulang.png" alt="Manual Mode Pseudocode" class="image">
+                    </div>
+                    <div class="mode">
+                        <h3><i class="fas fa-robot"></i> Autonomous Mode</h3>
+                        <img src="AutonomousP.png" alt="Autonomous Mode Pseudocode" class="image">
+                    </div>
+                </div>
+                
+
+            <div class="section-title">
+                <h2><i class="fas fa-project-diagram"></i> Flowchart</h2>
+            </div>
+            <div class="content">
+                <div class="mode-container">
+                    <div class="mode">
+                        <h3><i class="fas fa-keyboard"></i> Manual Mode</h3>
+                        <img src="ManualF.jpg" alt="Manual Mode Flowchart" class="image">
+                    </div>
+                    <div class="mode">
+                        <h3><i class="fas fa-robot"></i> Autonomous Mode</h3>
+                        <img src="AutonomousF.png" alt="Autonomous Mode Flowchart" class="image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">
+                    <h2><i class="fas fa-circuit-board"></i> Circuit Diagram</h2>
+                </div>
+                <div class="content">
+                    <img src="CD.png" alt="Circuit Diagram" class="circuit-diagram">
+                    <p>This circuit diagram shows the connections for a robotic arm controlled by an Arduino UNO with manual and autonomous modes, integrating multiple servos and a power supply.</p>
+                    <h3><i class="fas fa-cogs"></i> Components of Circuit Diagram</h3>
+                    <ul>
+                        </i> <strong>Arduino UNO Microcontroller:</strong> The main controller for the robotic arm.</li>
+
+                        <div></div>
+                        </i> <strong>Servos:</strong> Five servos.</li>
+
+                        <div></div>
+                        </i> <strong>Breadboard:</strong> Used for organizing and connecting the components.</li>
+
+                        <div></div>
+                        </i> <strong>Power Supply:</strong> AAA battery pack to power the servos and Arduino.</li>
+                        
+                        <div></div>
+                    </ul>
+                    <h3><i class="fas fa-keyboard"></i> Manual Mode</h3>
+                    <p>When the project is opened, the user can move the robotic arm using the keys on the keyboard. Commands are sent to the Arduino via serial communication (e.g., USB connection to a PC running Unity Hub). In Unity, a user interface is created to capture keyboard inputs and send corresponding commands to the Arduino, which controls the servos based on user input.</p>
+                    <h3><i class="fas fa-robot"></i> Autonomous Mode</h3>
+                    <p>The user presses the 'Autonomous Mode' button in the Unity interface to switch to autonomous operation. The Arduino then executes pre-programmed sequences stored in its memory. These sequences control the servos to perform specific tasks without further user input.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environment Setup</title>
+    <link rel="stylesheet" href="index4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+    <li><a href="index.html"><class=""><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="index2.html"><class=""><i class="fas fa-book"></i> Introduction</a></li>
+    <li><a href="index3.html"><class=""><i class="fas fa-download"></i> Download Application</a></li>
+    <li><a href="index4.html" class="active"><i class="fas fa-cogs"></i> Environment Setup</a></li>
+    <li><a href="index5.html"><i class="fas fa-robot"></i> ROS for Autonomous Mode</a></li>
+    <li><a href="index6.html"><i class="fas fa-calendar-check"></i> Planning Process</a></li>
+    <li><a href="index7.html"><i class="fas fa-paint-brush"></i> Design</a></li>
+    <li><a href="index8.html"><i class="fas fa-code"></i> Source Code</a></li>
+    <li><a href="index9.html"><i class="fas fa-book-open"></i> User Manual</a></li>
+    <li><a href="index10.html"><i class="fas fa-check-circle"></i> Assessment</a></li>
+    <li><a href="index11.html"><i class="fas fa-users"></i> Conclusion</a></li>
+    <li><a href="index12.html"><i class="fas fa-users"></i> About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="header">
+            <h1>Environment Setup</h1>
+        </div>
+
+        <div class="container">
+            <div class="step">
+                <h2>Step 1:</h2>
+                <p>Find the pick-and-place file that you downloaded from the Google Drive Link, then extract the pick-and-place zip file to ‘C:\’ drive or the main hard drive (SSD) of Windows.</p>
+                <img src="pick-and-place.png" alt="Pick and Place Download Screenshot" class="large-image">
+                <img src="Extract.png" alt="Extract File Screenshot" class="large-image">
+            </div>
+            
+            <div class="step">
+                <h2>Step 2:</h2>
+                <p>Open your Windows PowerShell, then navigate the project directory. Type the <code>cd ..</code> twice to move up two directories, then type <code>dir</code> to list the contents of the current directory.</p>
+                <img src="CMDShell.png" alt="PowerShell Navigation Screenshot" class="small-image">
+            </div>
+            
+            <div class="step">
+                <h2>Step 3:</h2>
+                <p>Next, use <code>cd</code> change directory commands to navigate to the pick_and_place. Type <code>cd .\pick-and-place\</code> to change the current directory to the pick-and-place folder. Next, type <code>cd .\Unity-Robotics-Hub\</code> to move into the Unity-Robotics-Hub directory, and then <code>cd tutorials</code> to access the tutorials subdirectory. By executing <code>cd .\pick_and_place\</code>, you will enter the pick_and_place folder.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="step">
+                <p>Type <code>git submodule update --init --recursive</code> to initialize and update any git submodules recursively, ensuring all nested repositories are up to date. Finally, build a Docker image using the command <code>docker build -t unity-robotics:pick-and-place -f docker/Dockerfile .</code>, which tags the image as unity-robotics:pick-and-place and uses the Dockerfile located in the docker directory to define the build process.</p>
+                <img src="widow PS.png" alt="Step 3" class="large-image">
+            </div>
+            
+            <div class="step">
+                <h2>Step 4:</h2>
+                <p>The next step is to run the Docker container by typing <code>docker run -it --rm -p 10000:10000 unity-robotics:pick-and-place /bin/bash</code>. This command will open the Docker Desktop application. When prompted, click 'Allow access'.</p>
+                <img src="Writing.png" alt="Step 4" class="large-image">
+            </div>
+
+            <div class="note">
+                <p><strong>Note:</strong> If you encounter an error, you should see if the docker desktop is open to run the code.</p>
+                <img src="docker2.png" alt="Docker Desktop" class="large-image">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="step">
+                <h2>Step 5:</h2>
+                <p>Lastly, open your Unity Hub and press the ‘Add’ button. Navigate to your main hard disk and find the project by following this path: ‘pick-and-place’ > ‘Unity-Robotics-Hub’ > ‘tutorials’ > ‘pick_and_place’ > ‘PickAndPlaceProject’. This will add the Unity project to your Unity Hub, allowing you to open and work on it.</p>
+                <img src="Project_unity.png" alt="Unity Hub" class="large-image">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="note">
+                <h2>Note:</h2>
+                <p>If you get a warning like this, you should install the required Unity Editor version and Visual Studio Community version.</p>
+                <img src="Warning.png" alt="Warning Message" class="large-image">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <p>In opening again the project:</p>
+                <ul class="objectives">
+                    <li><i class="fas fa-check-circle mini-icon"></i>Open Docker Desktop App</li>
+                    <li><i class="fas fa-check-circle mini-icon"></i>Open Unity Hub App</li>
+                    <li><i class="fas fa-check-circle mini-icon"></i>Open Windows PowerShell</li>
+                    <li><i class="fas fa-check-circle mini-icon"></i>Type ‘docker run -it --rm -p 10000:10000 unity-robotics:pick-and-place /bin/bash’</li>
+                    <li><i class="fas fa-check-circle mini-icon"></i>Type ‘roslaunch niryo_moveit part_3.launch’</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

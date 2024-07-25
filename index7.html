@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotic Arm Design</title>
+    <link rel="stylesheet" href="index7.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2><i class="fas fa-list"></i> AVATAR</h2>
+        <ul>
+    <li><a href="index.html"><class=""><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="index2.html"><class=""><i class="fas fa-book"></i> Introduction</a></li>
+    <li><a href="index3.html"><class=""><i class="fas fa-download"></i> Download Application</a></li>
+    <li><a href="index4.html"><class=""><i class="fas fa-cogs"></i> Environment Setup</a></li>
+    <li><a href="index5.html"><class=""><i class="fas fa-robot"></i> ROS for Autonomous Mode</a></li>
+    <li><a href="index6.html"><class=""><i class="fas fa-calendar-check"></i> Planning Process</a></li></li>
+    <li><a href="index7.html" class="active"><i class="fas fa-paint-brush"></i> Design</a></li></a></li></li>
+    <li><a href="index8.html"><i class="fas fa-code"></i> Source Code</a></li>
+    <li><a href="index9.html"><i class="fas fa-book-open"></i> User Manual</a></li>
+    <li><a href="index10.html"><i class="fas fa-check-circle"></i> Assessment</a></li>
+    <li><a href="index11.html"><i class="fas fa-users"></i> Conclusion</a></li>
+    <li><a href="index12.html"><i class="fas fa-users"></i> About Us</a></li>
+        </ul>
+    </div>
+    <div class="content-wrapper">
+        <div class="header">
+            <div class="header-centered">
+                <h1><i class="fas fa-robot"></i> Robotic Arm Design</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section">
+                <div class="image-container">
+                    <img src="Part1.png" alt="Robotic Arm Diagram" class="image">
+                    <img src="Part2.png" alt="Additional Image" class="image">
+                </div>
+                <h2 class="section-title"><i class="fas fa-cogs"></i> Components Used:</h2>
+                <div class="content">
+                    <ul class="objectives">
+                        <li>
+                            <strong><i class="fas fa-microchip"></i> Control System</strong>
+                            <ul>
+                                <li>This is the brain of the robotic arm, responsible for processing inputs from sensors and sending commands to the actuators.</li>
+                                <li>A microcontroller for low-level control and a computer for high-level tasks and user interface.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><i class="fas fa-sensor"></i> Sensors</strong>
+                            <ul>
+                                <li>Sensors collect data about the environment and the state of the robotic arm, such as position, speed, and force.
+                                    <ul>
+                                        <li><i class="fas fa-ruler"></i> Encoders ensure the arm's joints move to precise positions to weld car parts accurately.</li>
+                                        <li><i class="fas fa-weight-hanging"></i> Force sensors help in assembling delicate components like electronic parts without applying too much force.</li>
+                                        <li><i class="fas fa-eye"></i> Vision systems guide the arm to pick and place components from a conveyor belt, ensuring the correct parts are used.</li>
+                                        <li><i class="fas fa-bullhorn"></i> Proximity sensors detect nearby obstacles or humans, stopping the arm to prevent accidents.</li>
+                                        <li><i class="fas fa-thermometer-half"></i> Temperature sensors monitor the arm's motor and joint temperatures, preventing overheating during continuous operation.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><i class="fas fa-cogs"></i> Actuators</strong>
+                            <ul>
+                                <li>Actuators convert electrical signals from the control system into physical movement.</li>
+                                <li>Electric motors at each joint for precise movement.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><i class="fas fa-link"></i> Joints</strong>
+                            <ul>
+                                <li>Joints connect the segments of the robotic arm and allow for movement in various directions.</li>
+                                <li>A revolute joint providing rotation at the shoulder, elbow, and wrist.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><i class="fas fa-bolt"></i> Power Supply</strong>
+                            <ul>
+                                <li>The power supply provides the necessary electrical energy for the control system, actuators, and sensors.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><i class="fas fa-hand-pointer"></i> End Effector</strong>
+                            <ul>
+                                <li>The end effector is the tool attached to the end of the robotic arm that interacts with objects.</li>
+                                <li>A simple two-fingered gripper for picking and placing objects.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><i class="fas fa-puzzle-piece"></i> Links</strong>
+                            <ul>
+                                <li>Links are the rigid segments that form the structure of the robotic arm.</li>
+                                <li>Two links (upper arm and forearm) made of lightweight, rigid materials.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><i class="fas fa-baseball-bat"></i> Base</strong>
+                            <ul>
+                                <li>A heavy, stable platform with an integrated power supply and control unit.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><i class="fas fa-table"></i> Table</strong>
+                            <ul>
+                                <li>A stable surface for mounting the robotic arm and placing objects to be manipulated.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong><i class="fas fa-box"></i> Object</strong>
+                            <ul>
+                                <li>The item that the robotic arm interacts with during its operation.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="section-title"><i class="fas fa-cogs"></i> Robotic Arm Design</h2>
+                <div class="mode-container">
+                    <div class="mode">
+                        <img src="Part3.png" alt="Manual Mode">
+                        <img src="part5.png" alt="Manual Mode">
+                    </div>
+                    <div class="mode">
+                        <img src="part4.png" alt="Autonomous Mode">
+                        <img src="part6.png" alt="Autonomous Mode">
+                        <img src="part7.png" alt="Autonomous Mode">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

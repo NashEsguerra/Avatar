@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Mode</title>
+    <link rel="stylesheet" href="index5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>AVATAR</h2>
+        <ul>
+    <li><a href="index.html"><class=""><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="index2.html"><class=""><i class="fas fa-book"></i> Introduction</a></li>
+    <li><a href="index3.html"><class=""><i class="fas fa-download"></i> Download Application</a></li>
+    <li><a href="index4.html"><class=""><i class="fas fa-cogs"></i> Environment Setup</a></li>
+    <li><a href="index5.html" class="active"><i class="fas fa-robot"></i> ROS for Autonomous Mode</a></li>
+    <li><a href="index6.html"><i class="fas fa-calendar-check"></i> Planning Process</a></li>
+    <li><a href="index7.html"><i class="fas fa-paint-brush"></i> Design</a></li>
+    <li><a href="index8.html"><i class="fas fa-code"></i> Source Code</a></li>
+    <li><a href="index9.html"><i class="fas fa-book-open"></i> User Manual</a></li>
+    <li><a href="index10.html"><i class="fas fa-check-circle"></i> Assessment</a></li>
+    <li><a href="index11.html"><i class="fas fa-users"></i> Conclusion</a></li>
+    <li><a href="index12.html"><i class="fas fa-users"></i> About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="header header-centered">
+                <i class="fas fa-cogs"></i> Autonomous Mode <i class="fas fa-cogs"></i>
+            </div>
+
+            <div class="image-container">
+                <img src="flow.png" alt="Autonomous Mode Diagram" class="large-image">
+            </div>
+
+            <div class="content">
+                <h2><i class="fas fa-gear"></i> Generate ROS Messages:</h2>
+                <ul>
+                    <li>In Unity, look for “Robotics” in the upper left corner of the screen.</li>
+                    <li>Select “Generate ROS messages…”.</li>
+                    <li>Replace the ROS message path with the correct one by pressing the ‘Browse’ button then type ‘C:/pick-and-place/Unity-Robotics-Hub/tutorials/pick_and_place/ROS’.</li>
+                </ul>
+
+                <div class="spacer"></div>
+
+                <h2><i class="fas fa-project-diagram"></i> Rebuild the Project:</h2>
+                <ul class="project-list">
+                    <li><strong>moveit_msgs:</strong></li>
+                    <li> - msg</li>
+                    <li> - RobotTrajectory.msg</li>
+                    <li><strong>niryo_moveit:</strong></li>
+                    <li> - msg</li>
+                    <li> - NiryoMoveitJoints.msg</li>
+                    <li> - NiryoTrajectory.msg</li>
+                    <li> - srv</li>
+                </ul>
+
+                <div class="spacer"></div>
+
+                <h2><i class="fas fa-cogs"></i> Set Up the Publisher in the Scene:</h2>
+                <ul>
+                    <li>In the Scene tab, under the Hierarchy, look for an object named “Publisher”.</li>
+                    <li>Select “Publisher”. The “Inspector” tab will appear on the right side of the screen.</li>
+                    <li>Click “Add Component” at the bottom of the Inspector tab.</li>
+                    <li>Add the component “Script > Trajectory Planner”.</li>
+                </ul>
+
+                <div class="spacer"></div>
+
+                <h2><i class="fas fa-arrow-right"></i> Assign Elements in Trajectory Planner:</h2>
+                <ul>
+                    <li>
+                        Drag and drop elements from the Hierarchy to the newly added components in the Inspector:
+                        <ul class="sub-list">
+                            <li><i class="fas fa-hand-point-right mini-icon"></i> Drag “niyro_one” from the Hierarchy to the “Niyro One” field in the Trajectory Planner.</li>
+                            <li><i class="fas fa-hand-point-right mini-icon"></i> Drag “Target” from the Hierarchy to the “Target” field in the Trajectory Planner.</li>
+                            <li><i class="fas fa-hand-point-right mini-icon"></i> Drag “TargetPlacement” from the Hierarchy to the “Target Placement” field in the Trajectory Planner.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="spacer"></div>
+
+                <h2><i class="fas fa-cogs"></i> Update Button Event:</h2>
+                <ul>
+                    <li>In the Hierarchy tab, find and select “Canvas”.</li>
+                    <li>Within the Canvas, select the button you wish to configure.</li>
+                    <li>In the Inspector tab, scroll down to the OnClick() event section.</li>
+                    <li>Replace the “SourceDestinationPublisher.Publish” event with “Trajectory Planner.PublishJoints”:
+                        <ul class="sub-list">
+                            <li><i class="fas fa-check mini-icon"></i> Click the existing “SourceDestinationPublisher.Publish” to highlight it.</li>
+                            <li><i class="fas fa-check mini-icon"></i> Click the dropdown menu and select “Trajectory Planner”.</li>
+                            <li><i class="fas fa-check mini-icon"></i> From the next dropdown, select “PublishJoints”.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="spacer"></div>
+
+                <h2><i class="fas fa-play-circle"></i> Run the Autonomous Mode:</h2>
+                <p><code>roslaunch niyro_moveit part_3.launch</code></p>
+
+                <div class="spacer"></div>
+
+                <p class="note"><i class="fas fa-info-circle"></i> Note:<br>Ctrl + C - shortcut keys to stop the previous script in Windows PowerShell.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

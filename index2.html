@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotic Arm Project - Introduction</title>
+    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>AVATAR</h2>
+        <ul>
+    <li><a href="index.html"><class=""><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="index2.html" class="active"><i class="fas fa-book"></i> Introduction</a></li>
+    <li><a href="index3.html"><i class="fas fa-download"></i> Download Application</a></li>
+    <li><a href="index4.html"><i class="fas fa-cogs"></i> Environment Setup</a></li>
+    <li><a href="index5.html"><i class="fas fa-robot"></i> ROS for Autonomous Mode</a></li>
+    <li><a href="index6.html"><i class="fas fa-calendar-check"></i> Planning Process</a></li>
+    <li><a href="index7.html"><i class="fas fa-paint-brush"></i> Design</a></li>
+    <li><a href="index8.html"><i class="fas fa-code"></i> Source Code</a></li>
+    <li><a href="index9.html"><i class="fas fa-book-open"></i> User Manual</a></li>
+    <li><a href="index10.html"><i class="fas fa-check-circle"></i> Assessment</a></li>
+    <li><a href="index11.html"><i class="fas fa-users"></i> Conclusion</a></li>
+    <li><a href="index12.html"><i class="fas fa-users"></i> About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="content-wrapper">
+        <header class="header">
+            <i class="fas fa-robot"></i>
+            <h1>Robotic Arm Project</h1>
+            <i class="fas fa-robot"></i>
+        </header>
+        
+        <div class="container">
+            <div class="title"><i class="fas fa-robot"></i> Introduction</div>
+            
+            <div class="section-title"><i class="fas fa-cogs"></i> Robotic Arm</div>
+            <div class="content">
+                <p> Robotic Arm are devices that have been designed to do a given activity or job swiftly, correctly, and effectively. They're usually motor-driven consisting of a collection of joints, articulations, and manipulators, and are employed to accomplish heavy and/or repetitive processes quickly and consistently. They are particularly valuable in the industries of industrial production, manufacturing, machining, and assembly (Universal Robot, 2022).</p>
+            </div>
+            
+            <div class="section-title"><i class="fas fa-project-diagram"></i> Overview</div>
+            <div class="content">
+                <p> This project involves the development of a robotic arm capable of both manual and autonomous operation for picking up and placing objects on a table. The robotic arm integrates advanced perception and decision-making capabilities, allowing it to identify, grasp, and move objects either under human control or autonomously without human intervention. This dual-mode functionality showcases the potential of robotic systems to perform complex tasks in dynamic environments, highlighting both practical applications and technological advancements in the field of robotics. By leveraging state-of-the-art technologies in robotics and AI, this project aims to demonstrate the efficiency, accuracy, and versatility of robotic arms in real-world scenarios.</p>
+            </div>
+            
+            <div class="section-title"><i class="fas fa-tasks"></i> Objectives</div>
+            <div class="objectives">
+                <div class="objective-item">
+                    <i class="fas fa-download"></i> Download and Install the Necessary Application
+                </div>
+                <div class="objective-item">
+                    <i class="fas fa-cogs"></i> Set Up the Development Environment
+                </div>
+                <div class="objective-item">
+                    <i class="fas fa-robot"></i> Configure ROS for Autonomous Mode
+                </div>
+                <div class="objective-item">
+                    <i class="fas fa-calendar-check"></i> Understand the Planning Process
+                </div>
+                <div class="objective-item">
+                    <i class="fas fa-paint-brush"></i> Review the Components Used
+                </div>
+                <div class="objective-item">
+                    <i class="fas fa-code"></i> Analyze the Source Code
+                </div>
+                <div class="objective-item">
+                    <i class="fas fa-book-open"></i> View the User Manual
+                </div>
+                <div class="objective-item">
+                    <i class="fas fa-check-circle"></i> Complete the Assessment
+                </div>
+            </div>
+            
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var currentLocation = window.location.href;
+            var menuItems = document.querySelectorAll(".sidebar ul li a");
+
+            menuItems.forEach(function(item) {
+                if (item.href === currentLocation) {
+                    item.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
